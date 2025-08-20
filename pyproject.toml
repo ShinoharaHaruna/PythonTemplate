@@ -1,0 +1,51 @@
+# pyproject.toml
+
+[project]
+# Project metadata. These values will be replaced by the init.sh script.
+# 项目元数据。这些值将由 init.sh 脚本替换。
+name = "my-project-template"
+version = "0.1.0"
+description = "A new Python project generated from the template."
+authors = [{ name = "Your Name", email = "your@email.com" }]
+readme = "README.md"
+license = { file = "LICENSE" }
+requires-python = ">=3.10,<3.13"
+
+# Project dependencies.
+# 项目依赖。
+# dependencies = [
+#     "requests",
+# ]
+
+[project.urls]
+Homepage = "https://github.com/user/repo"
+
+# Optional dependencies, e.g., for development.
+# 可选依赖，例如用于开发的依赖。
+[project.optional-dependencies]
+dev = ["pytest", "pytest-cov", "black", "ruff", "mypy"]
+
+# --- Tool Configurations --- #
+
+[tool.ruff]
+# Enable Pyflakes (F), pycodestyle (E, W), and isort (I) rules.
+# 启用 Pyflakes (F)、pycodestyle (E, W) 和 isort (I) 规则。
+select = ["E", "F", "W", "I"]
+line-length = 88
+
+[tool.ruff.lint.isort]
+# Group imports in a modern, readable way.
+# 以现代、可读的方式对导入进行分组。
+known-first-party = ["my_project_template"]
+# This should be updated by the init script
+
+[tool.black]
+line-length = 88
+
+[tool.mypy]
+strict = true
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q"
+testpaths = ["tests"]
