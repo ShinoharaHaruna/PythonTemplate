@@ -28,10 +28,12 @@ dev = ["pytest", "pytest-cov", "black", "ruff", "mypy"]
 # --- Tool Configurations --- #
 
 [tool.ruff]
+line-length = 88
+
+[tool.ruff.lint]
 # Enable Pyflakes (F), pycodestyle (E, W), and isort (I) rules.
 # 启用 Pyflakes (F)、pycodestyle (E, W) 和 isort (I) 规则。
 select = ["E", "F", "W", "I"]
-line-length = 88
 
 [tool.ruff.lint.isort]
 # Group imports in a modern, readable way.
@@ -49,3 +51,4 @@ strict = true
 minversion = "6.0"
 addopts = "-ra -q"
 testpaths = ["tests"]
+pythonpath = ["src"]
