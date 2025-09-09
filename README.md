@@ -38,6 +38,18 @@ Once initialization is complete, activate the virtual environment:
 source .venv/bin/activate
 ```
 
+### Git Support
+
+To initialize the project with git (If the template is cloned from a remote repository), run:
+
+```bash
+git remote set-url origin <your-repo-url>
+git branch -M main
+git add .
+git commit -m <your-commit-message>
+git push -u origin main
+```
+
 ## Usage
 
 - **Run tests**:
