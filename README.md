@@ -25,7 +25,7 @@ This is a new Python project generated from a template. Provide a brief overview
 To set up your project for the first time, run the initialization script:
 
 ```bash
-sh init.sh
+./init.sh
 ```
 
 This script will guide you through setting up the project name, version, and Python environment.
